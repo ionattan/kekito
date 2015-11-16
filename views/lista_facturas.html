@@ -31,7 +31,7 @@
           <td> <?php echo $renglon["descripcion"] ?> </td>
           <td> <?php echo $renglon["precio"] ?> </td>
           <td>
-            <a href="?seccion=eliminar_factura&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-trash-o'></i> </a>
+            <a onclick="return confirm('seguro que quiere eliminar?')" href="?seccion=eliminar_factura&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-trash-o'></i> </a>
             <a href="?seccion=editar_factura&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-pencil'></i> </a>
           </td>
         </tr>

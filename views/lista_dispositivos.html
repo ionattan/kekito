@@ -1,7 +1,7 @@
 <!-- empieza lista de dispositivos -->
     <h2>lista de dispositivos</h2>
     <a  href="?seccion=crear_dispositivos" >crear dispositivos</a>
-    <table  style="width: 100%"  class="table-striped"> 
+    <table  style="width: 100%"  class="table-striped">
       <tbody>
         <tr>
           <td  style="background-color: rgb(192, 192, 192);">nombre</td>
@@ -27,7 +27,7 @@
           <td> <?php echo $renglon["fecha_inicial"] ?> </td>
           <td> <?php echo $renglon["notas"] ?> </td>
           <td>
-            <a href="?seccion=eliminar_dispositivos&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-trash-o'></i> </a>
+            <a onclick="return confirm('seguro que quiere eliminar?')" href="?seccion=eliminar_dispositivos&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-trash-o'></i> </a>
             <a href="?seccion=editar_dispositivos&renglon=<?php echo $renglon["id"];?>"><i class='fa fa-pencil'></i> </a>
           </td>
 
