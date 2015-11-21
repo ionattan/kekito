@@ -21,11 +21,16 @@ include("../php/config.php");
       <div class="row">
         <div class="col-lg-12">
         <?php
-          include("../views/menu.html");
           $seccion=isset($_GET["seccion"])?$_GET["seccion"]:"";
           if($seccion){
-            include("../views/$seccion.html");
+            include("../views/$seccion.php");
           }
+          $usuarios=$conexion->query("select * from usuarios");
+          $servicios=$conexion->query("select * from servicios");
+          $dispositivos=$conexion->query("select * from dispositivos");
+          $facturas=$conexion->query("select * from facturas");
+
+          include("../views/menu.php");
         ?>
         </div>
       </div>

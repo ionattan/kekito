@@ -10,7 +10,3 @@ $conexion=new mysqli($host,$usuario,$password,$database);
 if(mysqli_connect_errno()){
   echo "no se pudo conectar";
 }
-$usuarios=$conexion->query("select * from usuarios");
-$servicios=$conexion->query("select * from servicios");
-$dispositivos=$conexion->query("select * from dispositivos");
-$facturas=$conexion->query("select * from facturas");
